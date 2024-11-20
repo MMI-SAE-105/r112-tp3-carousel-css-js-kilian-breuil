@@ -30,6 +30,9 @@ Les margin négatifs à gauche et à droite corresponde à l'espace entre le nav
   /* Marge de 16px en haut et en bas - https://developer.mozilla.org/fr/docs/Web/CSS/margin */
   margin-top: 16px;
   margin-bottom: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .carousel__button {
   /* Largeur du bouton 50px - https://developer.mozilla.org/fr/docs/Web/CSS/width */
