@@ -76,4 +76,6 @@ Les margin négatifs à gauche et à droite corresponde à l'espace entre le nav
 .carousel__item img {
   /* Affiche l'image comme un bloc - https://developer.mozilla.org/fr/docs/Web/CSS/display */
   display: block;
+  height: 720px;
+  width: 1080px;
 }
