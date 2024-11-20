@@ -110,16 +110,22 @@ const nextButton = document.querySelector(".carousel__button--next");
 
 // Largeur de défilement d’un item
 if (carousel) {
-  // Scroll au clic sur le bouton précédent
-  prevButton.____________("_____", () => {
-    ______________________;
-  });
-
-  // Scroll au clic sur le bouton suivant
-  nextButton.____________("_____", () => {
-    ______________________;
-  });
-}
+    prevButton.addEventListener("click", () => {
+      const currentScroll = carousel.scrollLeft;
+      carousel.scrollTo({
+        left: currentScroll - 100,
+        behavior: 'smooth',
+      });
+    });
+  
+    nextButton.addEventListener("click", () => {
+      const currentScroll = carousel.scrollLeft;
+      carousel.scrollTo({
+        left: currentScroll + 100,
+        behavior: 'smooth',
+      });
+    });
+  }
 ```
 
 Testez en rechargeant la page et cliquant sur les boutons : Le carrousel doit défiler

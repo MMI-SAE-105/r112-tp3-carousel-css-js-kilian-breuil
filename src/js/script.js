@@ -1,12 +1,6 @@
 // *** CAROUSEL ***
 // TODO
 
-carousel = document.querySelector(".carousel__container");
-carousel.scrollLeft = 520;
-carousel.scrollBy({ left: +260, behavior: "smooth" });
-carousel.scrollBy({ left: -260, behavior: "smooth" });
-
-prevButton = document.querySelector(".carousel__button--prev");
 
 const carousel = document.querySelector(".carousel__container");
 const prevButton = document.querySelector(".carousel__button--prev");
@@ -17,7 +11,7 @@ if (carousel) {
     prevButton.addEventListener("click", () => {
       const currentScroll = carousel.scrollLeft;
       carousel.scrollTo({
-        left: currentScroll - itemWidth,
+        left: currentScroll - 100,
         behavior: 'smooth',
       });
     });
@@ -25,9 +19,11 @@ if (carousel) {
     nextButton.addEventListener("click", () => {
       const currentScroll = carousel.scrollLeft;
       carousel.scrollTo({
-        left: currentScroll + itemWidth,
+        left: currentScroll + 100,
         behavior: 'smooth',
       });
     });
   }
+
+
   
